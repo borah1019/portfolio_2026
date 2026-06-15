@@ -1,13 +1,43 @@
 // gsap.registerPlugin(ScrollTrigger);
 
-/* HEADER */
-const categories = document.querySelectorAll('#main .categories');
-const thumbnails = document.querySelectorAll('#main .thumbnail');
-const thumbnailProjects = document.querySelectorAll('#main .thumbnail .projects li');
+
+const categories = document.querySelectorAll('#main .categories button');
+const thumbnailProjects = document.querySelectorAll('#main .thumbnail .projects');
+const thumbnailProjectLists = document.querySelectorAll('#main .thumbnail .projects li');
 const detailProjects = document.querySelectorAll('#main .detail .projects li.project_wrap');
 
+// categories
+
+categories.forEach((category, index) => {
+  category.addEventListener('click', () => {
+    // category color
+    categories.forEach(category => {
+      category.classList.remove('active');
+    });
+    document.querySelector(`#main .categories button.ct0${index+1}`).classList.add('active');
+    
+    // 모든 thumbnail 숨김
+    thumbnailProjects.forEach(thumbnailProject => {
+      thumbnailProject.style.opacity = '0';
+
+      // active
+      thumbnailProject.classList.remove('active');
+      // console.log(thumbnailProject);
+    });
+    
+    // 선택한 thumbnail 표시
+    // console.log(document.querySelector(`#main .thumbnail .projects.ct0${index+1}`));
+    document.querySelector(`#main .thumbnail .projects.ct0${index+1}`).style.opacity = '100';
+    document.querySelector(`#main .thumbnail .projects.ct0${index+1}`).classList.add('active');
+  })
+})
+
+
+
+// detail
+
 // detail 열기
-thumbnailProjects.forEach((thumbnail, index) => {
+thumbnailProjectLists.forEach((thumbnail, index) => {
   thumbnail.addEventListener('click', () => {
     // scroll top
     window.scrollTo({
@@ -16,8 +46,8 @@ thumbnailProjects.forEach((thumbnail, index) => {
     });
 
     // 모든 thumbnail 숨김
-    thumbnails.forEach(thumbnail => {
-      thumbnail.style.display = 'none';
+    thumbnailProjects.forEach(thumbnailProject => {
+      thumbnailProject.style.display = 'none';
     });
     
     // 모든 detail 숨김
@@ -33,11 +63,10 @@ thumbnailProjects.forEach((thumbnail, index) => {
 
 // detail 닫기
 detailProjects.forEach((detail) => {
-  console.log(detail.querySelector('.btn_close'))
   detail.querySelector('.btn_close').addEventListener('click', () => {
     // 모든 thumbnail 표시
-    thumbnails.forEach(thumbnail => {
-      thumbnail.style.display = 'flex';
+    thumbnailProjects.forEach(thumbnailProject => {
+      thumbnailProject.style.display = 'flex';
     });
     
     // 모든 detail 숨김
