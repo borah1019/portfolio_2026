@@ -12,35 +12,32 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/fonts.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main_tab.css" />
+    <link rel="stylesheet" href="./css/main_mob.css" />
     <!-- JS -->
     <script src="./js/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
   </head>
   <body>
     <div id="wrap">
       <div id="header">
         <a href="./index.html">ABOUT</a>
         <a href="#" class="active">PROJECTS</a>
-        <a href="./contact.html">CONTACT</a>
       </div>
       <div id="main">
         <div class="categories">
-          <button class="ct01 active">GRAPHIC</button>
+          <button class="ct01">GRAPHIC</button>
           <button class="ct02">PRODUCT/PACKAGING</button>
-          <button class="ct03">ETC</button>
+          <button class="ct03">MY COLOR</button>
           <!-- <button class="ct04">MORE</button> -->
         </div>
         <div class="thumbnail">
-          <ul class="projects ct01 active">
+          <ul class="projects ct01">
             <li class="project01">
               <a href="./projects/ct01/01.html">
                 <div class="thumb_img"></div>
                 <b>식품 브랜드 SNS 콘텐츠</b>
-              </a>
-            </li>
-            <li class="project04">
-              <a href="./projects/ct01/04.html">
-                <div class="thumb_img"></div>
-                <b>식품 상세페이지</b>
               </a>
             </li>
             <li class="project02">
@@ -49,16 +46,22 @@
                 <b>문구 브랜드 SNS 콘텐츠</b>
               </a>
             </li>
-            <li class="project05">
-              <a href="./projects/ct01/05.html">
-                <div class="thumb_img"></div>
-                <b>문구 제품 상세페이지</b>
-              </a>
-            </li>
             <li class="project03">
               <a href="./projects/ct01/03.html">
                 <div class="thumb_img"></div>
                 <b>웹에이전시 SNS 콘텐츠</b>
+              </a>
+            </li>
+            <li class="project04">
+              <a href="./projects/ct01/04.html">
+                <div class="thumb_img"></div>
+                <b>식품 상세페이지</b>
+              </a>
+            </li>
+            <li class="project05">
+              <a href="./projects/ct01/05.html">
+                <div class="thumb_img"></div>
+                <b>문구 제품 상세페이지</b>
               </a>
             </li>
             <li class="project06">
@@ -67,13 +70,19 @@
                 <b>가전 제품 상세페이지</b>
               </a>
             </li>
+            <li class="project07">
+              <a href="./projects/ct01/07.html">
+                <div class="thumb_img"></div>
+                <b>전시 디렉팅</b>
+              </a>
+            </li>
           </ul>
           <ul class="projects ct02">
             <li class="project01">
               <a href="./projects/ct02/01.html">
                 <div class="thumb_img"></div>
                 <b>
-                  식품 브랜드 패키지<br>
+                  식품 브랜드 패키지<br class="br_pc">
                   & 굿즈 디자인
                 </b>
               </a>
@@ -82,17 +91,51 @@
               <a href="./projects/ct02/02.html">
                 <div class="thumb_img"></div>
                 <b>
-                  문구 제품 개발<br>
+                  문구 제품 개발<br class="br_pc">
                   & 패키지 디자인
                 </b>
               </a>
             </li>
-            <!-- <li class="project03">
+            <li class="project03">
               <a href="./projects/ct02/03.html">
                 <div class="thumb_img"></div>
-                <b>문구 브랜드 SNS 콘텐츠</b>
+                <b>
+                  고양이 간식 <br class="br_pc">
+                  패키지 디자인</b>
               </a>
-            </li> -->
+            </li>
+          </ul>
+          <ul class="projects ct03">
+            <li class="project01">
+              <a href="./projects/ct03/01.html">
+                <div class="thumb_img"></div>
+                <b>
+                  Everyone has <br class="br_pc">
+                  treasures
+                </b>
+              </a>
+            </li>
+            <li class="project02">
+              <a href="./projects/ct03/02.html">
+                <div class="thumb_img"></div>
+                <b>
+                  너로 가득한 세상에서 <br class="br_pc">
+                  나 찾기
+                </b>
+              </a>
+            </li>
+            <li class="project03">
+              <a href="./projects/ct03/03.html">
+                <div class="thumb_img"></div>
+                <b>의사대통</b>
+              </a>
+            </li>
+            <li class="project04">
+              <a href="./projects/ct03/04.html">
+                <div class="thumb_img"></div>
+                <b>그림 전도</b>
+              </a>
+            </li>
           </ul>
         </div>
       </div>

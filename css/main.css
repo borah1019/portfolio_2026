@@ -18,21 +18,35 @@
   white-space: nowrap;
 }
 
+*:not(a),
+*:not(button) {
+  user-select: none;
+}
+
 a, button {
   font-family: var(--font-title);
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 #header {
+  width: 100vw;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   padding: 40px;
+  margin: 0 auto;
 }
 
 #header a {
   font-size: 40px;
+  transition: 0.2s;
 }
 
 #header a.active {
+
   color: var(--color-main);
 }
 
@@ -44,11 +58,27 @@ a, button {
   position: relative;
 }
 
-/* ABOUT */
+.fu {
+  display: block;
+}
 
+.br_pc {
+  display: block;
+}
+
+.br_tab {
+  display: none;
+}
+
+.br_mob {
+  display: none;
+}
+
+/* ABOUT */
 #main .container {
+  width: 100%;
   max-width: 1200px;
-  padding: 100px 40px;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
@@ -56,81 +86,164 @@ a, button {
   height: calc(100vh - 120px);
   display: flex;
   align-items: flex-end;
+  padding-bottom: 100px;
+  border-bottom: 2px solid var(--color-main);
 }
 
-#main .title p, 
-#main .contact p {
+#main .title p span,
+#main .contact p span {
   color: var(--color-main);
   font-family: var(--font-p);
   font-size: 144px;
-  line-height: 1.1;
 }
 
 #main .profile {
+  border-bottom: 2px solid var(--color-main);
+}
+
+#main .profile .container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  column-gap: 40px;
-  height: 100vh;
-}
-
-#main .profile .keyword {
-  width: 302px;
-  text-align: right;
-}
-
-#main .profile .keyword .en p,
-#main .profile .skills>b {
-  color: var(--color-main);
-  font-family: var(--font-title);
-  font-size: 64px;
-  line-height: 1.4;
-}
-
-#main .profile .keyword .ko p,
-#main .profile .skills p {
-  padding-top: 24px;
-  font-family: var(--font-pretendard);
-  font-size: 28px;
-  line-height: 1.4;
-  font-weight: 300;
-  letter-spacing: -5%;
 }
 
 #main .profile .skills {
-  width: 302px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 600px;
+  min-height: 60vh;
+  border-right: 2px solid var(--color-main);
 }
 
-#main .profile .skills p b {
+#main .profile .skills>b {
+  margin-bottom: 20px;
+  font-size: 96px;
+}
+
+#main .profile .skills p {
+  letter-spacing: -1%;
+}
+
+#main .profile .keyword {
+  width: 50%;
+  text-align: right;
+}
+
+#main .profile .skills>b,
+#main .profile .keyword .en p {
+  color: var(--color-main);
+  font-family: var(--font-title);
+  font-size: 64px;
+  line-height: 1.2;
+  letter-spacing: 2%;
+}
+
+#main .profile .skills p,
+#main .profile .keyword .ko p {
+  padding-top: 24px;
+  font-family: var(--font-pretendard);
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+#main .profile .skills p b, 
+#main .profile .keyword .ko p {
   font-weight: 700;
   letter-spacing: 0;
 }
 
-#main .profile .img_profile {
-  width: 360px;
-  height: 480px;
-  border-radius: 36px;
-  background: url(../img/about/img_profile.png) no-repeat center/cover;
-  filter: saturate(0.85);
+#main .projects_image_wrap {
+  overflow: hidden;
+  width: 100%;
+  border-bottom: 2px solid var(--color-main);
+}
+
+#main .projects_image_wrap .projects_image {
+  display: flex;
+}
+
+#main .projects_image_wrap .projects_image li {
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  flex-shrink: 0;
+  width: 25vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-right: 2px solid var(--color-main);
+}
+
+#main .projects_image_wrap .projects_image li a {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+}
+
+#main .projects_image_wrap .projects_image li:nth-child(1),
+#main .projects_image_wrap .projects_image li:nth-child(7) {
+  background-image: url(../img/projects/ct03_project01_thumbnail.jpg);
+}
+
+#main .projects_image_wrap .projects_image li:nth-child(2),
+#main .projects_image_wrap .projects_image li:nth-child(8) {
+  background-image: url(../img/projects/ct01_project01_thumbnail.jpg);
+}
+
+#main .projects_image_wrap .projects_image li:nth-child(3),
+#main .projects_image_wrap .projects_image li:nth-child(9) {
+  background-image: url(../img/projects/ct01_project07_thumbnail.jpg);
+}
+
+#main .projects_image_wrap .projects_image li:nth-child(4),
+#main .projects_image_wrap .projects_image li:nth-child(10) {
+  background-image: url(../img/projects/ct02_project01_thumbnail.jpg);
+}
+
+#main .projects_image_wrap .projects_image li:nth-child(5),
+#main .projects_image_wrap .projects_image li:nth-child(11) {
+  background-image: url(../img/projects/ct01_project02_thumbnail.jpg);
+}
+
+#main .projects_image_wrap .projects_image li:nth-child(6),
+#main .projects_image_wrap .projects_image li:nth-child(12) {
+  background-image: url(../img/projects/ct02_project02_thumbnail.jpg);
+}
+
+#main .profile_02 {
+  height: 450px;
+  min-height: 40vh;
+  padding: 100px 40px;
+  border-bottom: 2px solid var(--color-main);
 }
 
 #main .contact {
-  height: calc(100vh - 120px);
+  height: 720px;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
-
-#main .contact p {
-  text-align: right;
+  padding: 40px 40px 100px;
+  border-bottom: 0;
 }
 
 #main .contact .links {
   display: flex;
-  justify-content: end;
   column-gap: 40px;
+  padding: 40px 0;
+}
+
+#main .contact a {
   font-size: 48px;
-  padding-top: 40px;
+  color: var(--color-black-01);
+  transition: 0.3s;
+  letter-spacing: 3%;
+}
+
+#main .contact a:hover {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-black-01);
 }
 
 /* PROJECTS */
@@ -138,13 +251,13 @@ a, button {
 #main .categories {
   display: flex;
   justify-content: center;
-  column-gap: 24px;
-  max-width: 1120px;
+  column-gap: 36px;
   padding: 20px 0 40px;
   margin: auto;
 }
 
 #main .categories button.active {
+
   color: var(--color-main);
 }
 
@@ -157,37 +270,39 @@ a, button {
   color: var(--color-main);
 }
 
+#main .thumbnail {
+  overflow: hidden;
+  position: relative;
+  height: 1580px;
+}
+
 #main .thumbnail .projects {
-  opacity: 0;
   position: absolute;
-  top: 204px;
-  left: 50%;
-  display: flex;
-  flex-wrap: wrap;
+  top: 0;
+  left: 40px;
+  right: 40px;
+  opacity: 0;
+  visibility: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  width: calc(100vw - 80px);
   max-width: 1120px;
-  transform: translate(-50%, 300px);
+  margin: 0 auto;
+  padding-bottom: 100px;
+  transform: translateY(200px);
   transition: 0.3s;
 }
 
 #main .thumbnail .projects.active {
-  z-index: 1;
-  opacity: 100;
-  transform: translate(-50%, 0);
-}
-
-#main .thumbnail .projects.ct01 {
-  opacity: 100;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 #main .thumbnail .projects li {
   overflow: hidden;
   position: relative;
-  width: calc((100vw - 120px) / 3);
-  max-width: calc((1120px - 40px) / 3);
-  height: calc(((100vw - 120px) / 3) * 1.3333);
-  max-height: calc(((1120px - 40px)/3) * 1.3333);
+  aspect-ratio: 3 / 4;
   border-radius: 16px;
   cursor: pointer;
   background-color: #000;
@@ -206,11 +321,12 @@ a, button {
 #main .thumbnail .projects li .thumb_img{
   width: 100%;
   height: 100%;
+  border-radius: 16px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: var(--color-black-03);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 #main .thumbnail .projects li b {
@@ -226,45 +342,17 @@ a, button {
   text-align: center;
   letter-spacing: -0.3;
   transform: translate(-50%, -50%);
-  transition: 0.5s;
+  transition: 0.6s;
 }
 
-/* #main .detail .projects {
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  min-height: 100vh;
-} */
-
 .project_wrap {
-  z-index: 1;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 40px;
-  max-width: 1200px;
-  padding: 120px 115px 100px;
-  margin: auto;
-  transition: 0.3s;
-  border: 1px solid #000;
-}
-
-.project_wrap::after {
-  content: '';
-  z-index: -1;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: #fff;
+  max-width: 1120px;
+  padding: 120px 80px 100px;
+  margin: 0 auto;
 }
 
 .project_wrap .project_title {
@@ -279,7 +367,7 @@ a, button {
 .project_wrap .caption {
   display: flex;
   justify-content: space-between;
-  width: calc(100% - 40px);
+  width: calc(100% - 80px);
 }
 
 .project_wrap .caption>div {
@@ -292,12 +380,10 @@ a, button {
 }
 
 .project_wrap .image_main {
-  width: calc(100vw - 230px);
-  height: calc((100vw - 230px) * 0.75);
+  width: 100%;
+  aspect-ratio: 4 / 3;
   max-width: 970px;
-  max-height: calc(970px *0.75);
   border-radius: 16px;
-  background-color: var(--color-black-03);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -308,22 +394,34 @@ a, button {
   white-space: wrap;
 }
 
+.project_wrap .description b {
+  display: inline;
+  font-weight: 700;
+  white-space: wrap;
+}
+
 .project_wrap .image_sub {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   width: 100%;
 }
 
+.project_wrap .image_sub.b30 {
+  row-gap: 66px;
+}
+
+.project_wrap .image_sub.col3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .project_wrap .image_sub.square li {
-  padding-top: calc((100% - 24px) / 2);
+  aspect-ratio: 1 / 1;
 }
 
 .project_wrap .image_sub li {
-  width: calc((100% - 24px) / 2);
-  height: 0;
-  padding-top: calc(((100% - 24px) / 2) * 1.3333);
+  position: relative;
+  aspect-ratio: 3 / 4;
   border-radius: 16px;
   background-repeat: no-repeat;
   background-position: center;
@@ -332,9 +430,12 @@ a, button {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.project_wrap .image_sub.col3 li {
-  width: calc((100% - 48px) / 3);
-  padding-top: calc(((100% - 48px) / 3) * 1.3333);
+.project_wrap .image_sub li::after {
+  position: absolute;
+  left: 20px;
+  bottom: -36px;
+  color: var(--color-black-02);
+  font-weight: 700;
 }
 
 /* projects image ct01 - 01 - 식품 브랜드 SNS 콘텐츠 */
@@ -514,7 +615,7 @@ a, button {
 /* projects image ct01 - 04 - 식품 상세페이지 */
 
 .projects.ct01 .project_wrap.project04 .image_sub li {
-  padding-top: calc(((100% - 48px) / 3) * 10);
+  aspect-ratio: 1 / 10;
   background-position: 0 0;
 }
 
@@ -527,12 +628,10 @@ a, button {
 }
 
 .projects.ct01 .project_wrap.project04 .image_sub li:nth-child(1) {
-  /* padding-top: calc(((100% - 48px) / 3) * 13.9968); */
   background-image: url(../img/projects/ct01_project04_01.jpg);
 }
 
 .projects.ct01 .project_wrap.project04 li:nth-child(2) {
-  /* padding-top: calc(((100% - 48px) / 3) * 18.2765); */
   background-image: url(../img/projects/ct01_project04_02.jpg);
 }
 
@@ -555,7 +654,7 @@ a, button {
 /* projects image ct01 - 05 - 문구 제품 상세페이지 */
 
 .projects.ct01 .project_wrap.project05 .image_sub li {
-  padding-top: calc(((100% - 24px) / 2) * 7.835);
+  aspect-ratio: 1 / 7.835;
   background-position: 0 0;
 }
 
@@ -602,7 +701,7 @@ a, button {
 /* projects image ct01 - 06 - 가전 제품 상세페이지 */
 
 .projects.ct01 .project_wrap.project06 .image_sub li {
-  padding-top: calc(((100% - 24px) / 2) * 17);
+  aspect-ratio: 1 / 17;
   background-position: 0 0;
 }
 
@@ -638,6 +737,48 @@ a, button {
   background-image: url(../img/projects/ct01_project06_01.jpg);
 }
 
+/* projects image ct01 - 07 - 전시 디자인 */
+
+#main .thumbnail .projects.ct01 li.project07 .thumb_img {
+  background-image: url(../img/projects/ct01_project07_thumbnail.jpg);
+}
+
+.projects.ct01 .project_wrap.project07 .image_main {
+  background: url(../img/projects/ct01_project07_main.jpg) no-repeat center/cover;
+}
+
+.projects.ct01 .project_wrap.project07 .image_sub li:nth-child(1) {
+  background-image: url(../img/projects/ct01_project07_04.jpg);
+}
+
+.projects.ct01 .project_wrap.project07 .image_sub li:nth-child(2) {
+  background-image: url(../img/projects/ct01_project07_02.jpg);
+}
+
+.projects.ct01 .project_wrap.project07 .image_sub li:nth-child(3) {
+  background-image: url(../img/projects/ct01_project07_03.jpg);
+}
+
+.projects.ct01 .project_wrap.project07 .image_sub li:nth-child(4) {
+  background-image: url(../img/projects/ct01_project07_05.jpg);
+}
+
+.projects.ct01 .project_wrap.project07 .image_sub li:nth-child(5) {
+  background-image: url(../img/projects/ct01_project07_08.jpg);
+}
+
+.projects.ct01 .project_wrap.project07 .image_sub li:nth-child(6) {
+  background-image: url(../img/projects/ct01_project07_01.jpg);
+}
+
+.projects.ct01 .project_wrap.project07 .image_sub li:nth-child(7) {
+  background-image: url(../img/projects/ct01_project07_09.jpg);
+}
+
+.projects.ct01 .project_wrap.project07 .image_sub li:nth-child(8) {
+  background-image: url(../img/projects/ct01_project07_07.jpg);
+}
+
 /* projects image ct02 - 01 - 식품 브랜드 패키지 및 굿즈 */
 
 #main .thumbnail .projects.ct02 li.project01 .thumb_img {
@@ -649,7 +790,7 @@ a, button {
 }
 
 .projects.ct02 .project_wrap.project01 .image_sub li:nth-child(1) {
-  background-image: url(../img/projects/ct02_project01_04.jpg);
+  background-image: url(../img/projects/ct02_project01_10.jpg);
 }
 
 .projects.ct02 .project_wrap.project01 .image_sub li:nth-child(2) {
@@ -657,18 +798,34 @@ a, button {
 }
 
 .projects.ct02 .project_wrap.project01 .image_sub li:nth-child(3) {
-  background-image: url(../img/projects/ct02_project01_07.jpg);
+  background-image: url(../img/projects/ct02_project01_08.jpg);
 }
 
 .projects.ct02 .project_wrap.project01 .image_sub li:nth-child(4) {
-  background-image: url(../img/projects/ct02_project01_05.jpg);
+  background-image: url(../img/projects/ct02_project01_13.jpg);
 }
 
 .projects.ct02 .project_wrap.project01 .image_sub li:nth-child(5) {
-  background-image: url(../img/projects/ct02_project01_01.jpg);
+  background-image: url(../img/projects/ct02_project01_14.jpg);
 }
 
 .projects.ct02 .project_wrap.project01 .image_sub li:nth-child(6) {
+  background-image: url(../img/projects/ct02_project01_05.jpg);
+}
+
+.projects.ct02 .project_wrap.project01 .image_sub li:nth-child(7) {
+  background-image: url(../img/projects/ct02_project01_09.jpg);
+}
+
+.projects.ct02 .project_wrap.project01 .image_sub li:nth-child(8) {
+  background-image: url(../img/projects/ct02_project01_15.jpg);
+}
+
+.projects.ct02 .project_wrap.project01 .image_sub li:nth-child(9) {
+  background-image: url(../img/projects/ct02_project01_01.jpg);
+}
+
+.projects.ct02 .project_wrap.project01 .image_sub li:nth-child(10) {
   background-image: url(../img/projects/ct02_project01_02.jpg);
 }
 
@@ -683,7 +840,7 @@ a, button {
 }
 
 .projects.ct02 .project_wrap.project02 .image_sub li:nth-child(1) {
-  background-image: url(../img/projects/ct02_project02_09.jpg);
+  background-image: url(../img/projects/ct02_project02_20.jpg);
 }
 
 .projects.ct02 .project_wrap.project02 .image_sub li:nth-child(2) {
@@ -691,15 +848,15 @@ a, button {
 }
 
 .projects.ct02 .project_wrap.project02 .image_sub li:nth-child(3) {
-  background-image: url(../img/projects/ct02_project02_06.jpg);
-}
-
-.projects.ct02 .project_wrap.project02 .image_sub li:nth-child(4) {
   background-image: url(../img/projects/ct02_project02_02.jpg);
 }
 
+.projects.ct02 .project_wrap.project02 .image_sub li:nth-child(4) {
+  background-image: url(../img/projects/ct02_project02_06.jpg);
+}
+
 .projects.ct02 .project_wrap.project02 .image_sub li:nth-child(5) {
-  background-image: url(../img/projects/ct02_project02_04.jpg);
+  background-image: url(../img/projects/ct02_project02_07.jpg);
 }
 
 .projects.ct02 .project_wrap.project02 .image_sub li:nth-child(6) {
@@ -707,25 +864,275 @@ a, button {
 }
 
 .projects.ct02 .project_wrap.project02 .image_sub li:nth-child(7) {
-  background-image: url(../img/projects/ct02_project02_07.jpg);
+  background-image: url(../img/projects/ct02_project02_04.jpg);
 }
 
 .projects.ct02 .project_wrap.project02 .image_sub li:nth-child(8) {
-  background-image: url(../img/projects/ct02_project02_01.jpg);
+  background-image: url(../img/projects/ct02_project02_09.jpg);
 }
 
 .projects.ct02 .project_wrap.project02 .image_sub li:nth-child(9) {
-  background-image: url(../img/projects/ct02_project02_10.jpg);
-}
-
-.projects.ct02 .project_wrap.project02 .image_sub li:nth-child(10) {
   background-image: url(../img/projects/ct02_project02_11.jpg);
 }
 
+.projects.ct02 .project_wrap.project02 .image_sub li:nth-child(10) {
+  background-image: url(../img/projects/ct02_project02_01.jpg);
+}
+
 .projects.ct02 .project_wrap.project02 .image_sub li:nth-child(11) {
-  background-image: url(../img/projects/ct02_project02_12.jpg);
+  background-image: url(../img/projects/ct02_project02_19.jpg);
 }
 
 .projects.ct02 .project_wrap.project02 .image_sub li:nth-child(12) {
+  background-image: url(../img/projects/ct02_project02_17.jpg);
+}
+
+.projects.ct02 .project_wrap.project02 .image_sub li:nth-child(13) {
+  background-image: url(../img/projects/ct02_project02_21.jpg);
+}
+
+.projects.ct02 .project_wrap.project02 .image_sub li:nth-child(14) {
+  background-image: url(../img/projects/ct02_project02_22.jpg);
+}
+
+.projects.ct02 .project_wrap.project02 .image_sub li:nth-child(15) {
+  background-image: url(../img/projects/ct02_project02_12.jpg);
+}
+
+.projects.ct02 .project_wrap.project02 .image_sub li:nth-child(16) {
+  background-image: url(../img/projects/ct02_project02_16.jpg);
+}
+
+.projects.ct02 .project_wrap.project02 .image_sub li:nth-child(17) {
+  background-image: url(../img/projects/ct02_project02_14.jpg);
+}
+
+.projects.ct02 .project_wrap.project02 .image_sub li:nth-child(18) {
   background-image: url(../img/projects/ct02_project02_13.jpg);
+}
+
+/* projects image ct02 - 03 - 고양이 간식 패키지 디자인 */
+
+#main .thumbnail .projects.ct02 li.project03 .thumb_img {
+  background-image: url(../img/projects/ct02_project03_thumbnail.jpg);
+}
+
+.projects.ct02 .project_wrap.project03 .image_main {
+  background: url(../img/projects/ct02_project03_main.jpg) no-repeat center/cover;
+}
+
+.projects.ct02 .project_wrap.project03 .image_sub li:nth-child(1) {
+  background-image: url(../img/projects/ct02_project03_01.jpg);
+}
+
+.projects.ct02 .project_wrap.project03 .image_sub li:nth-child(2) {
+  background-image: url(../img/projects/ct02_project03_02.jpg);
+}
+
+.projects.ct02 .project_wrap.project03 .image_sub li:nth-child(3) {
+  background-image: url(../img/projects/ct02_project03_03.jpg);
+}
+
+.projects.ct02 .project_wrap.project03 .image_sub li:nth-child(4) {
+  background-image: url(../img/projects/ct02_project03_04.jpg);
+}
+
+.projects.ct02 .project_wrap.project03 .image_sub li:nth-child(5) {
+  background-image: url(../img/projects/ct02_project03_05.jpg);
+}
+
+.projects.ct02 .project_wrap.project03 .image_sub li:nth-child(6) {
+  background-image: url(../img/projects/ct02_project03_06.jpg);
+}
+
+/* projects image ct03 - 01 - Everyone has treasures */
+
+#main .thumbnail .projects.ct03 li.project01 .thumb_img {
+  background-image: url(../img/projects/ct03_project01_thumbnail.jpg);
+}
+
+.projects.ct03 .project_wrap.project01 .image_main {
+  background: url(../img/projects/ct03_project01_main.jpg) no-repeat center/cover;
+}
+
+.projects.ct03 .project_wrap.project01 .image_sub li:nth-child(1) {
+  background-image: url(../img/projects/ct03_project01_03.jpg);
+}
+
+.projects.ct03 .project_wrap.project01 .image_sub li:nth-child(2) {
+  background-image: url(../img/projects/ct03_project01_02.jpg);
+}
+
+.projects.ct03 .project_wrap.project01 .image_sub li:nth-child(3) {
+  background-image: url(../img/projects/ct03_project01_08.jpg);
+}
+
+.projects.ct03 .project_wrap.project01 .image_sub li:nth-child(4) {
+  background-image: url(../img/projects/ct03_project01_05.jpg);
+}
+
+.projects.ct03 .project_wrap.project01 .image_sub li:nth-child(5) {
+  background-image: url(../img/projects/ct03_project01_04.jpg);
+}
+
+.projects.ct03 .project_wrap.project01 .image_sub li:nth-child(6) {
+  background-image: url(../img/projects/ct03_project01_09.jpg);
+}
+
+.projects.ct03 .project_wrap.project01 .image_sub li:nth-child(7) {
+  background-image: url(../img/projects/ct03_project01_06.jpg);
+}
+
+.projects.ct03 .project_wrap.project01 .image_sub li:nth-child(8) {
+  background-image: url(../img/projects/ct03_project01_07.jpg);
+}
+
+/* projects image ct03 - 02 - 너로 가득한 세상에서 나 찾기 */
+
+#main .thumbnail .projects.ct03 li.project02 .thumb_img {
+  background-image: url(../img/projects/ct03_project02_thumbnail.jpg);
+}
+
+.projects.ct03 .project_wrap.project02 .image_main {
+  background: url(../img/projects/ct03_project02_main.jpg) no-repeat center/cover;
+}
+
+.projects.ct03 .project_wrap.project02 .image_sub li:nth-child(1) {
+  background-image: url(../img/projects/ct03_project02_03.jpg);
+}
+
+.projects.ct03 .project_wrap.project02 .image_sub li:nth-child(2) {
+  background-image: url(../img/projects/ct03_project02_02.jpg);
+}
+
+.projects.ct03 .project_wrap.project02 .image_sub li:nth-child(3) {
+  background-image: url(../img/projects/ct03_project02_01.jpg);
+}
+
+.projects.ct03 .project_wrap.project02 .image_sub li:nth-child(4) {
+  background-image: url(../img/projects/ct03_project02_05.jpg);
+}
+
+/* projects image ct03 - 03 - 의사대통 */
+
+#main .thumbnail .projects.ct03 li.project03 .thumb_img {
+  background-image: url(../img/projects/ct03_project03_thumbnail.jpg);
+}
+
+.projects.ct03 .project_wrap.project03 .image_main {
+  background: url(../img/projects/ct03_project03_main.jpg) no-repeat center/cover;
+}
+
+.projects.ct03 .project_wrap.project03 .image_sub li:nth-child(1) {
+  background-image: url(../img/projects/ct03_project03_05.jpg);
+}
+
+.projects.ct03 .project_wrap.project03 .image_sub li:nth-child(2) {
+  background-image: url(../img/projects/ct03_project03_01.jpg);
+}
+
+.projects.ct03 .project_wrap.project03 .image_sub li:nth-child(3) {
+  background-image: url(../img/projects/ct03_project03_03.jpg);
+}
+
+.projects.ct03 .project_wrap.project03 .image_sub li:nth-child(4) {
+  background-image: url(../img/projects/ct03_project03_06.jpg);
+}
+
+.projects.ct03 .project_wrap.project03 .image_sub li:nth-child(5) {
+  background-image: url(../img/projects/ct03_project03_04.jpg);
+}
+
+.projects.ct03 .project_wrap.project03 .image_sub li:nth-child(6) {
+  background-image: url(../img/projects/ct03_project03_02.jpg);
+}
+
+/* projects image ct03 - 04 - 그림전도 */
+
+#main .thumbnail .projects.ct03 li.project04 .thumb_img {
+  background-image: url(../img/projects/ct03_project04_thumbnail.jpg);
+}
+
+.projects.ct03 .project_wrap.project04 .image_main {
+  background: url(../img/projects/ct03_project04_main.jpg) no-repeat center/cover;
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(1) {
+  background-image: url(../img/projects/ct03_project04_10.jpg);
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(1)::after {
+  content: '사랑이 흐려져가고 있진 않은가요?';
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(2) {
+  background-image: url(../img/projects/ct03_project04_03.jpg);
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(2)::after {
+  content: '범사에 감사하라 (데살로니가전서 5장 18절)';
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(3) {
+  background-image: url(../img/projects/ct03_project04_04.jpg);
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(3)::after {
+  content: '정말 중요한 것은 눈에 보이지 않아요';
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(4) {
+  background-image: url(../img/projects/ct03_project04_05.jpg);
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(4)::after {
+  content: '사랑은 오래오래 참는 것';
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(5) {
+  background-image: url(../img/projects/ct03_project04_06.jpg);
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(5)::after {
+  content: '화목하라 (로마서 12장 18절)';
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(6) {
+  background-image: url(../img/projects/ct03_project04_07.jpg);
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(6)::after {
+  content: '하루하루 성실한 삶은 결코 헛되지 않을 거예요';
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(7) {
+  background-image: url(../img/projects/ct03_project04_08.jpg);
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(7)::after {
+  content: '너희는 거저 받았으니 거저 주라 (마태복음 10장 8절)';
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(8) {
+  background-image: url(../img/projects/ct03_project04_09.jpg); 
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(8)::after {
+  content: '믿음대로 살길';
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(9) {
+  background-image: url(../img/projects/ct03_project04_02.jpg);
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(9)::after {
+  content: '나를 충전시켜주는 것은 무엇인가요?';
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(10) {
+  background-image: url(../img/projects/ct03_project04_11.jpg); 
+}
+
+.projects.ct03 .project_wrap.project04 .image_sub li:nth-child(10)::after {
+  content: '감사하는 마음 잊지 않기!';
 }
