@@ -2,10 +2,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 // ABOUT - fade_up
 gsap.from('#main .title .title_fu', {
-  y: 100,
+  y: 150,
   opacity: 0,
-  duration: 0.5,
-  stagger: 0.1,
+  duration: 0.4,
+  stagger: 0.2,
   scrollTrigger: {
     trigger: '#main .title_fu',
     toggleActions: 'play none play reverse'
@@ -14,12 +14,12 @@ gsap.from('#main .title .title_fu', {
 
 gsap.utils.toArray('#main .fu:not(#main .title_fu)').forEach(el => {
   gsap.from(el, {
-    y: 100,
+    y: 150,
     opacity: 0,
     duration: 0.5,
     scrollTrigger: {
       trigger: el,
-      start: 'top bottom',
+      start: '15% bottom',
       toggleActions: 'play none play reverse'
     }
   });
