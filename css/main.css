@@ -14,7 +14,7 @@
   box-sizing: border-box;
   color: var(--color-black-01);
   font-family: var(--font-p);
-  letter-spacing: -0.3;
+  letter-spacing: -0.3%;
   white-space: nowrap;
 }
 
@@ -233,10 +233,23 @@ a, button {
 }
 
 #main .profile_02 {
-  height: 450px;
   min-height: 40vh;
   padding: 100px 40px;
   border-bottom: 2px solid var(--color-main);
+}
+
+#main .profile_02 p {
+  color: var(--color-main);
+  font-size: 22px;
+  line-height: 1.4;
+  letter-spacing: -1%;
+  white-space: wrap;
+}
+
+#main .profile_02 b {
+  color: var(--color-main);
+  font-weight: 700;
+  white-space: wrap;
 }
 
 #main .contact {
@@ -430,12 +443,9 @@ a, button {
 .project_wrap .image_sub {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  width: 100%;
-}
-
-.project_wrap .image_sub.b30 {
+  column-gap: 24px;
   row-gap: 66px;
+  width: 100%;
 }
 
 .project_wrap .image_sub.col3 {

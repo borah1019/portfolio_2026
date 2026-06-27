@@ -16,7 +16,7 @@
     box-sizing: border-box;
     color: var(--color-black-01);
     font-family: var(--font-p);
-    letter-spacing: -0.3;
+    letter-spacing: -0.3%;
     white-space: nowrap;
   }
   
@@ -226,6 +226,26 @@
     aspect-ratio: 3 / 4;
   }
 
+  #main .profile_02 {
+    min-height: 40vh;
+    padding: 100px 40px;
+    border-bottom: 2px solid var(--color-main);
+  }
+
+  #main .profile_02 p {
+    color: var(--color-main);
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: -1%;
+    white-space: wrap;
+  }
+  
+  #main .profile_02 b {
+    color: var(--color-main);
+    font-weight: 700;
+    white-space: wrap;
+  }
+
   #main .contact {
     height: 600px;
     min-height: 40vh;
@@ -306,12 +326,18 @@
     visibility: hidden;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    row-gap: 58.38px;
+    column-gap: 10px;
+    row-gap: 74.38px;
     margin: 0 auto;
     padding-bottom: 100px;
     transform: translateY(200px);
     transition: 0.3s;
+  }
+
+  @media screen and (max-width: 410px) {
+    #main .thumbnail .projects {
+      row-gap: 63.59px;
+    }
   }
 
   #main .thumbnail .projects.active {
@@ -355,8 +381,8 @@
     position: absolute;
     top: auto;
     left: 10px;
-    bottom: -48.38px;
-    height: 38.38px;
+    bottom: -54.38px;
+    min-height: 38.38px;
     color: var(--color-black-01);
     font-family: "Paperlogy", sans-serif;
     font-weight: 700;
@@ -364,18 +390,17 @@
     line-height: 1.2;
     text-align: left;
     letter-spacing: -0.3;
+    white-space: wrap;
+    word-break: keep-all;
     transform: none;
     transition: 0.6s;
   }
 
   @media screen and (max-width: 410px) {
     #main .thumbnail .projects li b {
-      bottom: -40px;
-      height: 28.8px;
-      font-size: 12px;
-      line-height: 1.2;
-      white-space: wrap;
-      word-break: keep-all;
+      bottom: -43.59px;
+      min-height: 33.59px;
+      font-size: 14px;
     }
   }
 
@@ -446,12 +471,15 @@
   .project_wrap .image_sub {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    column-gap: 10px;
+    row-gap: 75.19px;
     width: 100%;
   }
 
-  .project_wrap .image_sub.b30 {
-    row-gap: 66px;
+  @media screen and (max-width: 410px) {
+    .project_wrap .image_sub {
+      row-gap: 74.8px;
+    }
   }
 
   .project_wrap .image_sub.col3 {
@@ -474,9 +502,23 @@
 
   .project_wrap .image_sub li::after {
     position: absolute;
-    left: 20px;
-    bottom: -36px;
+    left: 10px;
+    bottom: -55.19px;
+    min-height: 39.19px;
     color: var(--color-black-02);
+    font-size: 14px;
     font-weight: 700;
+    line-height: 1.4;
+    white-space: wrap;
+    word-break: keep-all;
+  }
+
+  @media screen and (max-width: 410px) {
+    .project_wrap .image_sub li::after {
+      bottom: -44.8px;
+      min-height: 28.8px;
+      font-size: 12px;
+      line-height: 1.2;
+    }
   }
 }

@@ -55,6 +55,7 @@ function updateThumbnailHeight() {
 }
 
 window.addEventListener('load', updateThumbnailHeight);
+// window.addEventListener('resize', updateThumbnailHeight);
 
 categories.forEach((category, index) => {
   category.addEventListener('click', () => {
