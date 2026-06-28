@@ -240,10 +240,12 @@ a, button {
 
 #main .profile_02 p {
   color: var(--color-main);
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.4;
   letter-spacing: -1%;
+  text-align: justify;
   white-space: wrap;
+  word-break: break-all;
 }
 
 #main .profile_02 b {
@@ -475,6 +477,35 @@ a, button {
   font-weight: 700;
 }
 
+.project_wrap .image_sub .swiper {
+  width: 100%;
+}
+
+.project_wrap .image_sub .swiper-slide {
+  aspect-ratio: 3 / 4;  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.project_wrap .image_sub .swiper-pagination .swiper-pagination-bullet {
+  background-color: var(--color-main);
+}
+
+.project_wrap .image_sub .swiper-button-prev,
+.project_wrap .image_sub .swiper-button-next {
+  color: var(--color-main);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.project_wrap .image_sub .swiper-button-prev::after,
+.project_wrap .image_sub .swiper-button-next::after {
+  font-size: 20px;
+  color: #fff;
+}
+
 /* projects image ct01 - 01 - 식품 브랜드 SNS 콘텐츠 */
 
 #main .thumbnail .projects.ct01 li.project01 .thumb_img {
@@ -601,52 +632,246 @@ a, button {
   background: url(../img/projects/ct01_project03_main.jpg) no-repeat center/cover;
 }
 
+/* 1 */
 .projects.ct01 .project_wrap.project03 .image_sub li:nth-child(1) {
   background-image: url(../img/projects/ct01_project03_27.jpg);
 }
 
-.projects.ct01 .project_wrap.project03 li:nth-child(2) {
+/* 2 */
+
+.projects.ct01 .project_wrap.project03 li:nth-child(2) .swiper-slide:nth-of-type(1) {
   background-image: url(../img/projects/ct01_project03_15.jpg);
 }
 
-.projects.ct01 .project_wrap.project03 .image_sub li:nth-child(3) {
+.projects.ct01 .project_wrap.project03 li:nth-child(2) .swiper-slide:nth-of-type(2) {
+  background-image: url(../img/projects/ct01_project03_15_02.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(2) .swiper-slide:nth-of-type(3) {
+  background-image: url(../img/projects/ct01_project03_15_03.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(2) .swiper-slide:nth-of-type(4) {
+  background-image: url(../img/projects/ct01_project03_15_04.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(2) .swiper-slide:nth-of-type(5) {
+  background-image: url(../img/projects/ct01_project03_15_05.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(2) .swiper-slide:nth-of-type(6) {
+  background-image: url(../img/projects/ct01_project03_30.jpg);
+}
+
+/* 3 */
+.projects.ct01 .project_wrap.project03 li:nth-child(3) .swiper-slide:nth-of-type(1) {
   background-image: url(../img/projects/ct01_project03_12.jpg);
 }
+
+.projects.ct01 .project_wrap.project03 li:nth-child(3) .swiper-slide:nth-of-type(2) {
+  background-image: url(../img/projects/ct01_project03_12_02.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(3) .swiper-slide:nth-of-type(3) {
+  background-image: url(../img/projects/ct01_project03_12_03.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(3) .swiper-slide:nth-of-type(4) {
+  background-image: url(../img/projects/ct01_project03_12_04.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(3) .swiper-slide:nth-of-type(5) {
+  background-image: url(../img/projects/ct01_project03_30.jpg);
+}
+
+/* 4 */
 
 .projects.ct01 .project_wrap.project03 .image_sub li:nth-child(4) {
   background-image: url(../img/projects/ct01_project03_26.jpg);
 }
 
+/* 5 */
+
 .projects.ct01 .project_wrap.project03 .image_sub li:nth-child(5) {
   background-image: url(../img/projects/ct01_project03_25.jpg);
 }
 
-.projects.ct01 .project_wrap.project03 .image_sub li:nth-child(6) {
+/* 6 */
+
+.projects.ct01 .project_wrap.project03 li:nth-child(6) .swiper-slide:nth-of-type(1) {
   background-image: url(../img/projects/ct01_project03_01.jpg);
 }
 
-.projects.ct01 .project_wrap.project03 .image_sub li:nth-child(7) {
+.projects.ct01 .project_wrap.project03 li:nth-child(6) .swiper-slide:nth-of-type(2) {
+  background-image: url(../img/projects/ct01_project03_01_02.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(6) .swiper-slide:nth-of-type(3) {
+  background-image: url(../img/projects/ct01_project03_01_03.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(6) .swiper-slide:nth-of-type(4) {
+  background-image: url(../img/projects/ct01_project03_01_04.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(6) .swiper-slide:nth-of-type(5) {
+  background-image: url(../img/projects/ct01_project03_01_05.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(6) .swiper-slide:nth-of-type(6) {
+  background-image: url(../img/projects/ct01_project03_01_06.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(6) .swiper-slide:nth-of-type(7) {
+  background-image: url(../img/projects/ct01_project03_30.jpg);
+}
+
+/* 7 */
+
+.projects.ct01 .project_wrap.project03 li:nth-child(7) .swiper-slide:nth-of-type(1) {
   background-image: url(../img/projects/ct01_project03_10.jpg);
 }
+
+.projects.ct01 .project_wrap.project03 li:nth-child(7) .swiper-slide:nth-of-type(2) {
+  background-image: url(../img/projects/ct01_project03_10_02.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(7) .swiper-slide:nth-of-type(3) {
+  background-image: url(../img/projects/ct01_project03_10_03.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(7) .swiper-slide:nth-of-type(4) {
+  background-image: url(../img/projects/ct01_project03_10_04.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(7) .swiper-slide:nth-of-type(5) {
+  background-image: url(../img/projects/ct01_project03_10_05.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(7) .swiper-slide:nth-of-type(6) {
+  background-image: url(../img/projects/ct01_project03_10_06.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(7) .swiper-slide:nth-of-type(7) {
+  background-image: url(../img/projects/ct01_project03_30.jpg);
+}
+
+/* 8 */
 
 .projects.ct01 .project_wrap.project03 .image_sub li:nth-child(8) {
   background-image: url(../img/projects/ct01_project03_24.jpg);
 }
 
-.projects.ct01 .project_wrap.project03 .image_sub li:nth-child(9) {
+/* 9 */
+
+.projects.ct01 .project_wrap.project03 li:nth-child(9) .swiper-slide:nth-of-type(1) {
   background-image: url(../img/projects/ct01_project03_14.jpg);
 }
 
-.projects.ct01 .project_wrap.project03 .image_sub li:nth-child(10) {
+.projects.ct01 .project_wrap.project03 li:nth-child(9) .swiper-slide:nth-of-type(2) {
+  background-image: url(../img/projects/ct01_project03_14_02.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(9) .swiper-slide:nth-of-type(3) {
+  background-image: url(../img/projects/ct01_project03_14_03.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(9) .swiper-slide:nth-of-type(4) {
+  background-image: url(../img/projects/ct01_project03_14_04.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(9) .swiper-slide:nth-of-type(5) {
+  background-image: url(../img/projects/ct01_project03_14_05.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(9) .swiper-slide:nth-of-type(6) {
+  background-image: url(../img/projects/ct01_project03_14_06.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(9) .swiper-slide:nth-of-type(7) {
+  background-image: url(../img/projects/ct01_project03_30.jpg);
+}
+
+/* 10 */
+
+.projects.ct01 .project_wrap.project03 li:nth-child(10) .swiper-slide:nth-of-type(1) {
   background-image: url(../img/projects/ct01_project03_07.jpg);
 }
 
-.projects.ct01 .project_wrap.project03 .image_sub li:nth-child(11) {
+.projects.ct01 .project_wrap.project03 li:nth-child(10) .swiper-slide:nth-of-type(2) {
+  background-image: url(../img/projects/ct01_project03_07_02.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(10) .swiper-slide:nth-of-type(3) {
+  background-image: url(../img/projects/ct01_project03_07_03.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(10) .swiper-slide:nth-of-type(4) {
+  background-image: url(../img/projects/ct01_project03_07_04.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(10) .swiper-slide:nth-of-type(5) {
+  background-image: url(../img/projects/ct01_project03_07_05.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(10) .swiper-slide:nth-of-type(6) {
+  background-image: url(../img/projects/ct01_project03_07_06.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(10) .swiper-slide:nth-of-type(7) {
+  background-image: url(../img/projects/ct01_project03_30.jpg);
+}
+
+/* 11 */
+
+.projects.ct01 .project_wrap.project03 li:nth-child(11) .swiper-slide:nth-of-type(1) {
   background-image: url(../img/projects/ct01_project03_18.jpg);
 }
 
-.projects.ct01 .project_wrap.project03 .image_sub li:nth-child(12) {
+.projects.ct01 .project_wrap.project03 li:nth-child(11) .swiper-slide:nth-of-type(2) {
+  background-image: url(../img/projects/ct01_project03_18_02.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(11) .swiper-slide:nth-of-type(3) {
+  background-image: url(../img/projects/ct01_project03_18_03.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(11) .swiper-slide:nth-of-type(4) {
+  background-image: url(../img/projects/ct01_project03_18_04.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(11) .swiper-slide:nth-of-type(5) {
+  background-image: url(../img/projects/ct01_project03_18_05.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(11) .swiper-slide:nth-of-type(6) {
+  background-image: url(../img/projects/ct01_project03_30.jpg);
+}
+
+/* 12 */
+
+.projects.ct01 .project_wrap.project03 li:nth-child(12) .swiper-slide:nth-of-type(1) {
   background-image: url(../img/projects/ct01_project03_20.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(12) .swiper-slide:nth-of-type(2) {
+  background-image: url(../img/projects/ct01_project03_20_02.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(12) .swiper-slide:nth-of-type(3) {
+  background-image: url(../img/projects/ct01_project03_20_03.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(12) .swiper-slide:nth-of-type(4) {
+  background-image: url(../img/projects/ct01_project03_20_04.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(12) .swiper-slide:nth-of-type(5) {
+  background-image: url(../img/projects/ct01_project03_20_05.jpg);
+}
+
+.projects.ct01 .project_wrap.project03 li:nth-child(12) .swiper-slide:nth-of-type(6) {
+  background-image: url(../img/projects/ct01_project03_30.jpg);
 }
 
 /* projects image ct01 - 04 - 식품 상세페이지 */
@@ -814,6 +1039,56 @@ a, button {
 
 .projects.ct01 .project_wrap.project07 .image_sub li:nth-child(8) {
   background-image: url(../img/projects/ct01_project07_07.jpg);
+}
+
+/* projects image ct01 - 08 - 가전 제품 브랜드 SNS 콘텐츠 */
+
+#main .thumbnail .projects.ct01 li.project08 .thumb_img {
+  background-image: url(../img/projects/ct01_project08_thumbnail.jpg);
+}
+
+.projects.ct01 .project_wrap.project08 .image_main {
+  background: url(../img/projects/ct01_project08_main.jpg) no-repeat center/cover;
+}
+
+.projects.ct01 .project_wrap.project08 .image_sub li:nth-child(1) {
+  background-image: url(../img/projects/ct01_project08_01.jpg);
+}
+
+.projects.ct01 .project_wrap.project08 .image_sub li:nth-child(2) {
+  background-image: url(../img/projects/ct01_project08_05.jpg);
+}
+
+.projects.ct01 .project_wrap.project08 .image_sub li:nth-child(3) {
+  background-image: url(../img/projects/ct01_project08_11.jpg);
+}
+
+.projects.ct01 .project_wrap.project08 .image_sub li:nth-child(4) {
+  background-image: url(../img/projects/ct01_project08_13.jpg);
+}
+
+.projects.ct01 .project_wrap.project08 .image_sub li:nth-child(5) {
+  background-image: url(../img/projects/ct01_project08_08.jpg);
+}
+
+.projects.ct01 .project_wrap.project08 .image_sub li:nth-child(6) {
+  background-image: url(../img/projects/ct01_project08_09.jpg);
+}
+
+.projects.ct01 .project_wrap.project08 .image_sub li:nth-child(7) {
+  background-image: url(../img/projects/ct01_project08_02.jpg);
+}
+
+.projects.ct01 .project_wrap.project08 .image_sub li:nth-child(8) {
+  background-image: url(../img/projects/ct01_project08_10.jpg);
+}
+
+.projects.ct01 .project_wrap.project08 .image_sub li:nth-child(9) {
+  background-image: url(../img/projects/ct01_project08_03.jpg);
+}
+
+.projects.ct01 .project_wrap.project08 .image_sub li:nth-child(10) {
+  background-image: url(../img/projects/ct01_project08_04.jpg);
 }
 
 /* projects image ct02 - 01 - 식품 브랜드 패키지 및 굿즈 */
