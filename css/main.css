@@ -239,7 +239,7 @@ a, button {
 }
 
 #main .profile_02 p {
-  color: var(--color-main);
+  color: var(--color-black-01);
   font-size: 20px;
   line-height: 1.4;
   letter-spacing: -1%;
@@ -249,7 +249,7 @@ a, button {
 }
 
 #main .profile_02 b {
-  color: var(--color-main);
+  color: var(--color-black-01);
   font-weight: 700;
   white-space: wrap;
 }
@@ -454,11 +454,8 @@ a, button {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.project_wrap .image_sub.square li {
-  aspect-ratio: 1 / 1;
-}
-
 .project_wrap .image_sub li {
+  overflow: hidden;
   position: relative;
   aspect-ratio: 3 / 4;
   border-radius: 16px;
@@ -467,6 +464,14 @@ a, button {
   background-size: cover;
   background-color: var(--color-black-03);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project_wrap .image_sub.square li {
+  aspect-ratio: 1 / 1;
+}
+
+.project_wrap .image_sub.video li {
+  aspect-ratio: 1 / 1.7778;
 }
 
 .project_wrap .image_sub li::after {
@@ -504,6 +509,15 @@ a, button {
 .project_wrap .image_sub .swiper-button-next::after {
   font-size: 20px;
   color: #fff;
+}
+
+.project_wrap .image_sub img,
+.project_wrap .image_sub video {
+  width: 100%;
+}
+
+.project_wrap .image_sub li.square {
+  aspect-ratio: 1 / 1;
 }
 
 /* projects image ct01 - 01 - 식품 브랜드 SNS 콘텐츠 */
@@ -1089,6 +1103,12 @@ a, button {
 
 .projects.ct01 .project_wrap.project08 .image_sub li:nth-child(10) {
   background-image: url(../img/projects/ct01_project08_04.jpg);
+}
+
+/* projects image ct01 - 09 - 영상 콘텐츠 */
+
+#main .thumbnail .projects.ct01 li.project09 .thumb_img {
+  background-image: url(../img/projects/ct01_project09_thumbnail.jpg);
 }
 
 /* projects image ct02 - 01 - 식품 브랜드 패키지 및 굿즈 */
